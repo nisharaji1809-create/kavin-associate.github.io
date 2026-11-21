@@ -1,0 +1,1214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kavin Associates | Construction & Infrastructure</title>
+<meta name="description" content="Kavin Associates - Construction and building services in Coimbatore, Tamil Nadu.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #102638;
+  --navy-light: #19394b;
+  --teal: #087e83;
+  --gold: #c8a45d;
+  --cream: #f6f5f0;
+  --white: #ffffff;
+  --text: #273746;
+  --muted: #71808a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* TOP BAR */
+
+.topbar {
+  background: var(--navy);
+  color: #e8eeee;
+  padding: 10px 7%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: .4px;
+}
+
+/* HEADER */
+
+header {
+  background: white;
+  padding: 13px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 18px rgba(0,0,0,.07);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+}
+
+.brand h2 {
+  font-size: 19px;
+  color: var(--navy);
+  letter-spacing: 1px;
+}
+
+.brand small {
+  color: var(--teal);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--teal);
+}
+
+.nav-button {
+  background: var(--teal);
+  color: white;
+  padding: 12px 19px;
+  border-radius: 3px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: none;
+  color: var(--navy);
+  font-size: 28px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  border-radius: 3px;
+  transition: .3s;
+  border: 1px solid var(--gold);
+}
+
+.btn:hover {
+  background: transparent;
+  color: white;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 14px 24px;
+  border: 1px solid white;
+  color: white;
+  margin-left: 10px;
+  transition: .3s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--navy);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 90px 8%;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(8,25,39,.94), rgba(8,25,39,.45)),
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.12;
+  margin: 22px 0;
+}
+
+.hero p {
+  color: #e3e9ed;
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 85px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 43px);
+  color: var(--navy);
+  margin: 14px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.about-content h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  font-size: 38px;
+  margin: 15px 0;
+}
+
+.about-content p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+.about-points {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.about-points div {
+  background: var(--cream);
+  padding: 15px;
+  border-left: 3px solid var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* SERVICES */
+
+.services {
+  background: var(--cream);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-card {
+  background: white;
+  padding: 32px 25px;
+  border-bottom: 3px solid var(--gold);
+  transition: .3s;
+  box-shadow: 0 7px 25px rgba(0,0,0,.04);
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.1);
+}
+
+.service-icon {
+  color: var(--teal);
+  font-size: 31px;
+}
+
+.service-card h3 {
+  color: var(--navy);
+  font-size: 19px;
+  margin: 17px 0 12px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* PROJECT GALLERY */
+
+.gallery {
+  background: white;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  border: 1px solid #d5dfe1;
+  background: white;
+  color: var(--navy);
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  background: #e5e9e9;
+  border-radius: 3px;
+}
+
+.gallery-item.hide {
+  display: none;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 35px 18px 18px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(transparent, rgba(5,20,30,.9));
+}
+
+/* CALL TO ACTION */
+
+.cta {
+  text-align: center;
+  background:
+    linear-gradient(rgba(13,37,53,.92), rgba(13,37,53,.92)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+  color: white;
+}
+
+.cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 43px);
+  margin: 15px 0;
+}
+
+.cta p {
+  color: #d7e0e5;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--cream);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-top: 3px solid var(--gold);
+  box-shadow: 0 7px 25px rgba(0,0,0,.04);
+}
+
+.contact-card h3 {
+  color: var(--navy);
+  margin-bottom: 20px;
+  font-size: 21px;
+}
+
+.contact-detail {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.contact-detail .symbol {
+  color: var(--teal);
+  font-size: 22px;
+}
+
+.contact-detail p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.contact-detail strong {
+  color: var(--navy);
+}
+
+.contact-detail a {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 3px;
+}
+
+/* ENQUIRY FORM */
+
+.enquiry {
+  max-width: 850px;
+  margin: 35px auto 0;
+  background: white;
+  padding: 35px;
+  box-shadow: 0 7px 25px rgba(0,0,0,.04);
+}
+
+.enquiry h3 {
+  color: var(--navy);
+  margin-bottom: 22px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.enquiry input,
+.enquiry select,
+.enquiry textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dce2e4;
+  background: #fafafa;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.enquiry input:focus,
+.enquiry select:focus,
+.enquiry textarea:focus {
+  border-color: var(--teal);
+}
+
+.enquiry textarea {
+  margin-top: 15px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.enquiry button {
+  margin-top: 15px;
+  border: none;
+  background: var(--teal);
+  color: white;
+  padding: 14px 23px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.enquiry button:hover {
+  background: var(--navy);
+}
+
+/* FOOTER */
+
+footer {
+  background: #0a1b29;
+  color: #b8c5cc;
+  padding: 50px 8% 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.footer-brand img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-brand strong {
+  color: white;
+  letter-spacing: 1px;
+}
+
+footer h4 {
+  color: var(--gold);
+  margin-bottom: 17px;
+}
+
+footer p,
+footer a {
+  font-size: 13px;
+  line-height: 2;
+  color: #b8c5cc;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff20;
+  margin-top: 35px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* BACK TO TOP */
+
+.back-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: var(--teal);
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  display: none;
+  z-index: 100;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+  nav {
+    gap: 14px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:700px) {
+  header {
+    padding: 12px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 22px;
+    flex-direction: column;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .topbar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: 540px;
+    padding: 70px 7%;
+  }
+
+  .about-grid,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 290px;
+  }
+
+  .service-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section {
+    padding: 65px 6%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-outline {
+    margin: 12px 0 0;
+  }
+}
+
+@media(max-width:480px) {
+  .service-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 240px;
+  }
+
+  .brand h2 {
+    font-size: 16px;
+  }
+
+  .brand img {
+    width: 53px;
+    height: 53px;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>Construction & Building Services</span>
+  <span>Coimbatore, Tamil Nadu, India</span>
+</div>
+
+<!-- HEADER -->
+<header>
+  <a href="#home" class="brand">
+    <img src="C:\Users\NISHA\Desktop\k1(1).png">
+    <div>
+      <h2>KAVIN ASSOCIATES</h2>
+      <small>Building with trust</small>
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="nav-button" href="tel:+919366654011">Call Us</a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content reveal">
+    <div class="eyebrow">Welcome to Kavin Associates</div>
+
+    <h1>Building Today.<br>Shaping Tomorrow.</h1>
+
+    <p>
+      Professional construction and building services in Coimbatore.
+      Connect with Kavin Associates to discuss your next building project.
+    </p>
+
+    <a href="#contact" class="btn">Discuss Your Project</a>
+    <a href="#about" class="btn-outline">Explore More</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+
+    <img class="about-image reveal"
+      src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+      alt="Modern building interior">
+
+    <div class="about-content reveal">
+      <div class="eyebrow">About Our Company</div>
+
+      <h2>Welcome to Kavin Associates</h2>
+
+      <p>
+        Kavin Associates is a construction and building-services business
+        located in Neelikonampalayam, Coimbatore, Tamil Nadu.
+      </p>
+
+      <p>
+        We aim to provide a professional point of contact for customers
+        looking for building and construction-related services.
+        Contact our team to discuss your requirements and project details.
+      </p>
+
+      <div class="about-points">
+        <div>✓ Professional Approach</div>
+        <div>✓ Customer Communication</div>
+        <div>✓ Project Enquiries</div>
+        <div>✓ Coimbatore Location</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="section-heading reveal">
+    <div class="eyebrow">What We Do</div>
+    <h2>Our Services</h2>
+    <p>
+      Explore the construction-related services you can enquire about.
+      Contact us to confirm the scope and availability of each service.
+    </p>
+  </div>
+
+  <div class="service-grid">
+
+    <div class="service-card reveal">
+      <div class="service-icon">⌂</div>
+      <h3>Building Construction</h3>
+      <p>Enquire about building construction requirements and project planning.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">▦</div>
+      <h3>Residential Projects</h3>
+      <p>Discuss construction requirements for residential properties.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">▤</div>
+      <h3>Commercial Projects</h3>
+      <p>Enquire about construction requirements for commercial spaces.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">⌘</div>
+      <h3>Renovation Enquiries</h3>
+      <p>Contact the team to discuss possible renovation requirements.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">▧</div>
+      <h3>Building Planning</h3>
+      <p>Discuss your initial building requirements and project expectations.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">✧</div>
+      <h3>Project Consultation</h3>
+      <p>Get in touch to discuss your construction-related enquiries.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECT GALLERY -->
+<section class="gallery" id="projects">
+
+  <div class="section-heading reveal">
+    <div class="eyebrow">Our Gallery</div>
+    <h2>Building & Architecture</h2>
+    <p>
+      Explore a selection of architectural and construction photographs.
+    </p>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All Images</button>
+    <button class="filter-btn" data-filter="residential">Residential</button>
+    <button class="filter-btn" data-filter="commercial">Commercial</button>
+    <button class="filter-btn" data-filter="construction">Construction</button>
+  </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item" data-category="construction">
+      <img src="C:\Users\NISHA\Desktop\Screenshot (15).png">
+      <div class="gallery-caption">Construction Site</div>
+    </div>
+
+    <div class="gallery-item" data-category="residential">
+      <img src="C:\Users\NISHA\Desktop\Screenshot (14).png">
+      <div class="gallery-caption">Interior Design</div>
+    </div>
+
+    <div class="gallery-item" data-category="residential">
+      <img src="C:\Users\NISHA\Desktop\Screenshot (7).png">
+      <div class="gallery-caption">Residential Design</div>
+    </div>
+
+    <div class="gallery-item" data-category="construction">
+      <img src="C:\Users\NISHA\Desktop\ka1.jpg">
+      <div class="gallery-caption">Construction Work</div>
+    </div>
+
+    <div class="gallery-item" data-category="residential">
+      <img src="C:\Users\NISHA\Desktop\kav1.jpg">
+      <div class="gallery-caption">Interior Spaces</div>
+    </div>
+
+    <div class="gallery-item" data-category="commercial">
+      <img src="C:\Users\NISHA\Desktop\Screenshot (16).png">
+      <div class="gallery-caption">Architectural Design</div>
+    </div>
+
+  </div>
+
+  <p style="text-align:center;color:#71808a;font-size:12px;margin-top:25px;line-height:1.7">
+    Note: These are illustrative stock photographs, not verified photographs
+    of completed Kavin Associates projects.
+  </p>
+
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+  <div class="eyebrow">Let's Build Together</div>
+  <h2>Have a Project in Mind?</h2>
+  <p>Contact Kavin Associates to discuss your building requirements.</p>
+  <a href="#contact" class="btn">Get In Touch</a>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="section-heading reveal">
+    <div class="eyebrow">Contact Us</div>
+    <h2>Let's Start a Conversation</h2>
+    <p>
+      Reach out to Kavin Associates for enquiries and further information.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-card reveal">
+      <h3>Company Information</h3>
+
+      <div class="contact-detail">
+        <div class="symbol">⌖</div>
+        <p>
+          <strong>Address</strong><br>
+          No. 7 A, Netaji Puram East,<br>
+          Sakthi Nagar East 1st Main Road,<br>
+          Neelikonampalayam,<br>
+          Coimbatore – 641033,<br>
+          Tamil Nadu, India.
+        </p>
+      </div>
+
+      <div class="contact-detail">
+        <div class="symbol">☎</div>
+        <p>
+          <strong>Phone Number</strong><br>
+          <a href="tel:+919366654011">+91 93666 54011</a>
+        </p>
+      </div>
+
+      <div class="contact-detail">
+        <div class="symbol">✉</div>
+        <p>
+          <strong>Enquiries</strong><br>
+          Contact us by phone or WhatsApp.
+        </p>
+      </div>
+
+      <a class="btn"
+         href="https://wa.me/919366654011"
+         target="_blank"
+         rel="noopener">
+         WhatsApp Us
+      </a>
+    </div>
+
+    <div class="contact-card reveal">
+      <h3>Our Location</h3>
+
+      <iframe
+        class="map"
+        title="Kavin Associates location in Coimbatore"
+        loading="lazy"
+        src="https://www.google.com/maps?q=No.%207A%2C%20Netaji%20Puram%20East%2C%20Sakthi%20Nagar%20East%201st%20Main%20Road%2C%20Neelikonampalayam%2C%20Coimbatore%20641033&output=embed">
+      </iframe>
+
+      <p style="margin-top:15px;font-size:13px">
+        <a style="color:var(--teal);font-weight:bold"
+           target="_blank"
+           rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=No.%207A%2C%20Netaji%20Puram%20East%2C%20Neelikonampalayam%2C%20Coimbatore%20641033">
+           Open Google Maps Directions →
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- WHATSAPP ENQUIRY FORM -->
+  <div class="enquiry reveal">
+    <h3>Send a Project Enquiry</h3>
+
+    <form id="enquiryForm">
+
+      <div class="form-grid">
+        <input type="text" id="customerName"
+               placeholder="Your Name" required>
+
+        <input type="tel" id="customerPhone"
+               placeholder="Your Phone Number" required>
+
+        <select id="projectType" required>
+          <option value="">Select Project Type</option>
+          <option>Residential Building</option>
+          <option>Commercial Building</option>
+          <option>Renovation Enquiry</option>
+          <option>Other Enquiry</option>
+        </select>
+
+        <input type="text" id="projectLocation"
+               placeholder="Project Location">
+      </div>
+
+      <textarea id="projectMessage"
+                placeholder="Tell us about your requirements..."
+                required></textarea>
+
+      <button type="submit">Send Enquiry on WhatsApp →</button>
+
+    </form>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+      <div class="footer-brand">
+        <img src="C:\Users\NISHA\Desktop\k1(1).png">
+        <strong>KAVIN ASSOCIATES</strong>
+      </div>
+
+      <p>
+        Construction and building-services enquiries in
+        Coimbatore, Tamil Nadu.
+      </p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="#home">Home</a></p>
+      <p><a href="#about">About Us</a></p>
+      <p><a href="#services">Services</a></p>
+      <p><a href="#projects">Gallery</a></p>
+      <p><a href="#contact">Contact</a></p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Coimbatore, Tamil Nadu</p>
+      <p><a href="tel:+919366654011">+91 93666 54011</a></p>
+      <p><a href="https://wa.me/919366654011">WhatsApp Enquiries</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Kavin Associates.
+    All Rights Reserved.
+  </div>
+
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<script>
+
+// CURRENT YEAR
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// MOBILE NAVIGATION
+const menuToggle = document.getElementById("menuToggle");
+const navigation = document.getElementById("navigation");
+
+menuToggle.addEventListener("click", () => {
+  navigation.classList.toggle("open");
+  menuToggle.textContent =
+    navigation.classList.contains("open") ? "✕" : "☰";
+});
+
+document.querySelectorAll("#navigation a").forEach(link => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("open");
+    menuToggle.textContent = "☰";
+  });
+});
+
+// GALLERY FILTER
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    filterButtons.forEach(item =>
+      item.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
+
+    galleryItems.forEach(item => {
+      const category = item.dataset.category;
+
+      if (filter === "all" || filter === category) {
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    });
+
+  });
+});
+
+// SCROLL REVEAL ANIMATION
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+
+// BACK TO TOP BUTTON
+const backTop = document.getElementById("backTop");
+
+window.addEventListener("scroll", () => {
+  backTop.style.display =
+    window.scrollY > 400 ? "block" : "none";
+});
+
+backTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// WHATSAPP ENQUIRY FORM
+document.getElementById("enquiryForm")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("customerName").value.trim();
+
+  const phone =
+    document.getElementById("customerPhone").value.trim();
+
+  const type =
+    document.getElementById("projectType").value;
+
+  const location =
+    document.getElementById("projectLocation").value.trim();
+
+  const message =
+    document.getElementById("projectMessage").value.trim();
+
+  const whatsappMessage =
+    "Hello Kavin Associates!\n\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Project Type: " + type + "\n" +
+    "Project Location: " + location + "\n" +
+    "Requirements: " + message;
+
+  const whatsappURL =
+    "https://wa.me/919366654011?text=" +
+    encodeURIComponent(whatsappMessage);
+
+  window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
